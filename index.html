@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+    <header>
+        <div class="header-main">
+            <i class="fas fa-calculator"></i>
+            <h1 style="font-size: 1.2rem;margin-left: 5px;">SIMPLE CALCULATOR</h1>
+        </div>
+        <div class="header-nav">
+            <button type="submit" id="btn-dark-mode" onclick="toggle()">
+                <i class="fas fa-moon"></i>
+                <p style="color: rgb(202, 202, 202);">Dark Mode</p>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="calculator">
+            <div class="calc-header">
+                <div class="calc-header-input">
+                    <input type="text" id="inputnumber" disabled>
+                </div>
+            </div>
+            <div class="calc-body">
+                <div class="calc-button">
+                    <div class="calc-row">
+                        <button class="btn" type="submit" onclick="clr()" id="importantbutton">Clear</button>
+                        <button class="btn" type="submit" onclick="del_calc()" id="importantbutton">Del</button>
+                        <button class="btn" type="submit" onclick="insert(')')">)</button>
+                        <button class="btn" type="submit" onclick="insert('/')">/</button>
+                    </div>
+                    <div class="calc-row">
+                        <button class="btn" type="submit" onclick="insert('7')">7</button>
+                        <button class="btn" type="submit" onclick="insert('8')">8</button>
+                        <button class="btn" type="submit" onclick="insert('9')">9</button>
+                        <button class="btn" type="submit" onclick="insert('*')">*</button>
+                    </div>
+                    <div class="calc-row">
+                        <button class="btn" type="submit" onclick="insert('4')">4</button>
+                        <button class="btn" type="submit" onclick="insert('5')">5</button>
+                        <button class="btn" type="submit" onclick="insert('6')">6</button>
+                        <button class="btn" type="submit" onclick="insert('-')">-</button>
+                    </div>
+                    <div class="calc-row">
+                        <button class="btn" type="submit" onclick="insert('1')">1</button>
+                        <button class="btn" type="submit" onclick="insert('2')">2</button>
+                        <button class="btn" type="submit" onclick="insert('3')">3</button>
+                        <button class="btn" type="submit" onclick="insert('+')">+</button>
+                    </div>
+                    <div class="calc-row">
+                        <button class="btn" type="submit" onclick="insert('(')">(</button>
+                        <button class="btn" type="submit" onclick="insert('0')">0</button>
+                        <button class="btn" type="submit" onclick="insert('.')">.</button>
+                        <button class="btn" type="submit" onclick="equal()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/9b997b2ecb.js" crossorigin="anonymous"></script>
+</body>
+</html>
