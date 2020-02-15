@@ -17,7 +17,21 @@ function del_calc() {
 }
 
 function equal() {
-    input_box.value = eval(input_box.value)
+    try {
+        eval(input_box.value);
+        input_box.value = eval(input_box.value)
+    }
+    catch (e) {
+        if (e instanceof SyntaxError || e instanceof TypeError) {
+            input_box.value = "Undefined"
+            sleep(750).then( () => {
+                input_box.value = ""
+            })
+        }
+        else {
+            throw(e)
+        }
+    }
 }
 
 function toggle() {
@@ -41,3 +55,6 @@ function toggle() {
     }
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
